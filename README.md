@@ -9,6 +9,6 @@ Usage
 
 2) Copy 'n Paste the following blob in as the url:
 
->javascript:(function(){js=document.createElement('SCRIPT');js.type='text/javascript';js.src='https://raw.github.com/kalmas/event-logging-logging/master/ell.js?x='+(Math.random());document.getElementsByTagName('head')[0].appendChild(js);
+>javascript:(function(){js=document.createElement('SCRIPT');js.type='text/javascript';js.src='https://raw.github.com/kalmas/event-logging-logging/master/ell.js?x='+(Math.random());document.getElementsByTagName('head')[0].appendChild(js);})();
 
 3) Navigate to FRC page you want to inspect and click the bookmark
