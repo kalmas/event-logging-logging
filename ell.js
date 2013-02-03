@@ -3,7 +3,14 @@
 	// methods	
 
 	function init(){
-		$('body').append('<div id="ell-info">Hello</div>');
+		$('<div id="ell-info"></div>').css({
+			'position': 'absolute',
+    			'border': '1px solid black',
+    			'display': 'none',
+    			'background-color': 'white',
+    			'padding': '3px',
+    			'z-index': '1500',
+		}).appendTo('body');
 		$('[onmousedown],[onclick]').each(function(){highlight($(this), 'inline')});
 
 	}
