@@ -1,5 +1,5 @@
 The Event Logging Logger
-++++====================
+========================
 
 This bookmarklet gives you an easy way to look at FRC click events. (Event Logging^2, if you will :-)
 
