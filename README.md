@@ -10,7 +10,7 @@ Usage
 2) Copy 'n Paste the following in as the url:
 
 ```javascript
-javascript:(function(){js=document.createElement('SCRIPT');js.type='text/javascript';js.src='http://localhost/cruzers/event-logging-logging/ell.js?x='+(Math.random());document.getElementsByTagName('head')[0].appendChild(js);css=document.createElement('LINK');css.rel='stylesheet';css.type='text/css';css.href='http://localhost/cruzers/event-logging-logging/ell.css?x='+(Math.random());document.getElementsByTagName('head')[0].appendChild(css);})();)
+javascript:(function(){js=document.createElement('SCRIPT');js.type='text/javascript';js.src='https://raw.github.com/kalmas/event-logging-logging/master/ell.js?x='+(Math.random());document.getElementsByTagName('head')[0].appendChild(js);css=document.createElement('LINK');css.rel='stylesheet';css.type='text/css';css.href='https://raw.github.com/kalmas/event-logging-logging/master/ell.css?x='+(Math.random());document.getElementsByTagName('head')[0].appendChild(css);})();
 ```
 
 3) Navigate to page you want to inspect and click the bookmark
