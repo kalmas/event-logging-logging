@@ -18,6 +18,7 @@
 	function showInfo(event){
 		target = $(event.target);
 		target.removeAttr('alt');
+		target.removeAttr('title');
 		// Image elements are a bit wacky, so move the target up the dom
 		if(target.is('img')){
 			target = target.parent();
