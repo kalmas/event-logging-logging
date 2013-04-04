@@ -25,12 +25,24 @@
   		var type = $(element).attr('type');
   		
   		// Get rid of things that might navigate us
+//  		if($(element).attr('id') && $(element).attr('id').match(/^watchVideo/)){
+//  			var id = $(element).attr('id');
+//  			$(element).removeAttr('id');
+//  		}
+//  		if($(element).attr('class') && $(element).attr('class').match(/lightbox/)){
+//  			var cls = $(element).attr('class');
+//  			$(element).removeAttr('class');
+//  		}  		
   		$(element).removeAttr('href')
   			// .removeAttr('onclick')
   			// .removeAttr('onmousedown')
   			.removeAttr('type');
   		
-  		c.log('clicking ' + current);
+  		c.log(current + ", "
+  			+ Date.now() + ", "	
+  			+ onclick + ", "
+  			+ onmousedown  		
+  		);
   		$(element).css("border", "2px solid orange");
   		$(element).trigger('click');
   		$(element).trigger('mousedown');
@@ -42,13 +54,24 @@
   		if(type !== undef){
   			$(element).prop('type', type);
   		}
+//  		if(id !== undef){
+//  			$(element).attr('id', id);
+//  		}
+//  		if(cls !== undef){
+//  			$(element).attr('class', cls);
+//  		}
 
   		window.setTimeout(clickIt, 300, elements, current + 1);
   		
   	};
 	
-  	var elements = $('[onmousedown],[onclick]');
+  	$('.lightbox').unbind();
   	
+  	var elements = $('[onmousedown],[onclick]');
+  	c.log("There are " + elements.length + " things to click. "
+  			+ "Gotta Click 'Em All!");
+  	c.log("");
+  	c.log("id, timestamp, onclick, onmousedown");
   	clickIt(elements, 0);
 
 })(this);
