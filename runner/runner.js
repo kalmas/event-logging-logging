@@ -1,19 +1,17 @@
-(function(){
+(function(window){
   	var $ = window.jQuery;
-	// methods	
 
-	function init(){
-		$('<div id="ell-info"></div>').css({
-			'position': 'absolute',
-    			'border': '1px solid black',
-    			'display': 'none',
-    			'background-color': 'white',
-    			'padding': '3px',
-    			'z-index': '1500',
-		}).appendTo('body');
-		$('[onmousedown],[onclick]').each(function(){highlight($(this), 'inline')});
-
-	}
+	$('<div id="ell-info"></div>').css({
+		'position': 'absolute',
+			'border': '1px solid black',
+			'display': 'none',
+			'background-color': 'white',
+			'padding': '3px',
+			'z-index': '1500',
+	}).appendTo('body');
+	$('[onmousedown],[onclick]').each(function(){ 
+		highlight($(this), 'inline'); 
+	});
 	
 	function showInfo(event){
 		target = $(event.target);
@@ -66,7 +64,6 @@
 			}
 			
 		} else {
-			// TODO: Grab functions for unobtrusivly bound events
 			var statements = [];
 		}
 		
@@ -86,17 +83,6 @@
 			target.css("border", "2px solid red");
 		}
 		
-//		if(scriptText.match(/linkTrack/i)){
-//			target.css("border", "2px solid pink");
-//		}
-//		if(scriptText.match(/scLogger/i)){
-//			target.css("border", "2px solid yellow");
-//		}
-//		if(scriptText.match(/common_log_event/i)){
-//			target.css("border", "2px solid orange");
-//		}
 	}
-	
-	$(document).ready(init);
 
-}());
+})(this);
