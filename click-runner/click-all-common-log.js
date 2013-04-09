@@ -99,7 +99,7 @@
   		if(type !== undef){	$(element).prop('type', type); }
 
   		// Do it agian
-  		window.setTimeout(clickIt, 300, elements, currentElement + 1);  		
+  		window.setTimeout(clickIt, 1200, elements, currentElement + 1);  		
   	};
   	
   	var finish = function(currentElement){
